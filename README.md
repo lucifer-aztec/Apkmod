@@ -27,7 +27,7 @@ after installation | Around 100 MB | Around 700-900 MB
 #### Why Apkmod is extremely small ?
 Because it has Alpine instead of Ubuntu, kali, parrot or other glibc based distros.
 
-##### Binding payload to original APKs
+#### Binding payload to original APKs
 1.Move original apk to your Internal Storage
 2.Then use this command
 ###### Command
